@@ -1,9 +1,9 @@
 <template>
-  <div class="container mx-auto p-5">
+  <div class="container p-5 mx-auto">
     <section class="text-center">
       <AppButton
         @click="$router.push('/admin/new-post')"
-        class="border border-slate-500 px-1"
+        class="px-1 border border-slate-500"
       >
         Create a posts
       </AppButton>
