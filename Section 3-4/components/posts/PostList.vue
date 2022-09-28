@@ -1,20 +1,16 @@
 <template>
   <div>
-    <div class="mx-auto container p-5">
+    <div class="container p-5 mx-auto">
       <div class="bg-[url('~/assets/images/51130.jpg')]">
-        <h1 class="text-center text-2xl">RIENCARNATION'S BLOG</h1>
-        <div class="divide-y-2 flex flex-col gap-4">
+        <h1 class="text-2xl text-center">RIENCARNATION'S BLOG</h1>
+        <div class="flex flex-col gap-4 divide-y-2">
           <PostPreview
-            id="1"
+            v-for="post in posts"
+            :key="post.id"
+            :id="post.id"
             :is-admin="isAdmin"
-            thumbnail="https://a.ppy.sh/22435935?1645473442.jpeg"
-            title="Post 1"
-          />
-          <PostPreview
-            id="2"
-            :is-admin="isAdmin"
-            thumbnail="https://a.ppy.sh/22435935?1645473442.jpeg"
-            title="Post 2"
+            :thumbnail="post.thumbnail"
+            :title="post.title"
           />
         </div>
       </div>
@@ -32,6 +28,10 @@ export default {
     isAdmin: {
       type: Boolean,
       default: false,
+    },
+    posts: {
+      type: Array,
+      required: true,
     },
   },
 };

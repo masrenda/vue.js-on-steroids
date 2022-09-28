@@ -5,7 +5,7 @@
       class="w-40 h-40 mx-auto bg-cover"
       :style="{ backgroundImage: `url(${thumbnail})` }"
     ></div>
-    <button class="border mt-2 border-slate-500 px-1">
+    <button class="px-1 mt-2 border border-slate-500">
       <nuxt-link :to="postLink">{{ title }}</nuxt-link>
     </button>
   </div>
