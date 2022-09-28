@@ -1,8 +1,11 @@
 <template>
-  <div class="mx-auto container">
-    <h1 class="text-2xl text-center p-5 font-semibold">
-      Maaf Halaman Ini Sedang Dalam Perbaikan
+  <div class="container mx-auto">
+    <h1 class="p-5 text-2xl font-semibold text-center">
+      Maaf Halaman Ini tidak ada/sedang dalam perbaikan
     </h1>
+    <div class="w-40 mx-auto text-center border border-slate-700">
+      <button @click="$router.push('/')">Back to Home</button>
+    </div>
   </div>
 </template>
 
