@@ -12,6 +12,7 @@ export default {
     PostList,
   },
   asyncData(context, callback) {
+    console.log(context);
     setTimeout(() => {
       callback(null, {
         loadedPosts: [
