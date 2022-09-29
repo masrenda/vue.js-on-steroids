@@ -1,7 +1,10 @@
 <template>
-  <div class="top-0 sticky z-10 w-full bg-zinc-900">
+  <div class="sticky top-0 z-10 w-full bg-zinc-900">
     <div class="flex flex-wrap justify-between">
-      <div class="p-5 text-white font-cff">Logo</div>
+      <div class="p-5 text-white font-cff">
+        <nuxt-link to="/">RIE</nuxt-link>
+      </div>
+
       <div class="p-5 text-white">
         <button
           @click="isOpen = !isOpen"
@@ -17,8 +20,8 @@
       :class="isOpen ? 'block' : 'hidden'"
       class="flex flex-col items-center gap-8 p-5 text-white font-cff md:px-5 md:flex-row md:inline-flex md:absolute md:top-0 md:right-0"
     >
-      <nuxt-link class="text-red-600" to="/admin">Admin</nuxt-link>
-      <nuxt-link to="/">Home</nuxt-link>
+      <nuxt-link class="text-red-600" to="/posts">Blog</nuxt-link>
+      <nuxt-link to="/admin">Admin</nuxt-link>
       <nuxt-link to="/about">About</nuxt-link>
     </div>
   </div>
