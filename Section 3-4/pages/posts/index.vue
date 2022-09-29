@@ -32,7 +32,7 @@ export default {
           ],
         });
       }, 1000);
-      // reject(new Error())
+      // reject(new Error());
     })
       .then((data) => {
         return data;
@@ -40,6 +40,10 @@ export default {
       .catch((e) => {
         context.error(e);
       });
+  },
+  created() {
+    this.$store.dispatch("setPosts", this.loadedPosts);
+    console.log(this.$store.getters.loadedPosts);
   },
 };
 </script>
